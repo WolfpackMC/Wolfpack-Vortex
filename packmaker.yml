@@ -12,6 +12,9 @@ mods:
 - ferritecore:
 - lithium:
 - phosphor:
+- sodium:
+    url: 'https://github.com/qouteall/sodium-fabric/releases/download/ipc1165_2/sodium-fabric-mc1.16.4-0.1.1-ipc2.jar'
+- bits-and-chisels:
 name: Wolfpack-Vortex
 resourcepacks: []
 title: Wolfpack-Vortex
