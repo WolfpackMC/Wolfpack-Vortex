@@ -1,0 +1,18 @@
+authors:
+- Kalka
+files:
+- location: overrides
+fabric:
+minecraft: 1.16.5
+mods:
+- pehkui:
+- fabric-api:
+- immersive-portals-mod:
+- hwyla:
+- ferritecore:
+- lithium:
+- phosphor:
+name: Wolfpack-Vortex
+resourcepacks: []
+title: Wolfpack-Vortex
+version: 1.0.0
