@@ -30,6 +30,7 @@ steps:
     files:
       - Wolfpack-Vortex.zip
       - config.zip
+      - packmaker.lock
   when:
     event: tag
 
