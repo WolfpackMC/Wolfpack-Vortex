@@ -9,7 +9,6 @@ mods:
 - spark:
 - fabric-api:
 - roughly-enough-items:
-- blur:
 - mambience:
 - modmenu:
 - dynamic-sound-filters:
