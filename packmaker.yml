@@ -6,7 +6,6 @@ fabric:
 minecraft: 1.16.5
 mods:
 - pehkui:
-- foamfix-optimization-mod:
 - spark:
 - fabric-api:
 - roughly-enough-items:
