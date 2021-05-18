@@ -2,23 +2,30 @@ kind: pipeline
 type: docker
 name: packmaker
 
+workspace:
+  path: /drone/src
+
 steps:
 - name: pre-lock
   image: kalka/drone-entrypoint
   commands:
-  - neofetch
-  - python -VVV
-  - curl -L 'https://get.kalka.io/curseforge.db' > curseforge.db
   - git clone https://git.kalka.io/kalka/wolfpackmaker
+  - neofetch
+  - python3 -VVV
+  - curl -L 'https://get.kalka.io/curseforge.db' > curseforge.db
 - name: lock
   image: kalka/drone-entrypoint
   commands:
-  - packmaker -vvvv --config wolfpackmaker/packmaker.conf lock
+  - python3 wolfpackmaker/util/lock.py
 - name: package
   image: kalka/drone-entrypoint
   commands:
-  - zip -r Wolfpack-Vortex.zip wolfpackmaker/wolfpackmaker.py wolfpackmaker/wolfpackmaker.bat instance.cfg mmc-pack.json
-  - zip -r config.zip mmc-pack.json
+  - zip -r Wolfpack-Vortex.zip wolfpackmaker/wolfpackmaker.py wolfpackmaker/wolfpackmaker.bat wolfpackmaker/requirements.txt wolfpackmaker/multimc.bat .minecraft instance.cfg mmc-pack.json
+  - zip -r config.zip .minecraft mmc-pack.json
+- name: mod-list
+  image: kalka/drone-entrypoint
+  commands:
+  - python3 wolfpackmaker/raw_mod_list.py Odin
 - name: upload
   image: plugins/gitea-release
   settings:
@@ -30,7 +37,8 @@ steps:
     files:
       - Wolfpack-Vortex.zip
       - config.zip
-      - packmaker.lock
+      - manifest.lock
+      - modlist.db
   when:
     event: tag
 

@@ -1,9 +1,5 @@
-authors:
-- Kalka
-files:
-- location: overrides
-fabric:
-minecraft: 1.16.5
+modloader: Fabric
+version: 1.16.5
 mods:
 - pehkui:
 - spark:
@@ -24,7 +20,3 @@ mods:
 - sodium:
     url: 'https://github.com/qouteall/sodium-fabric/releases/download/ipc1165_2/sodium-fabric-mc1.16.4-0.1.1-ipc2.jar'
 - bits-and-chisels:
-name: Wolfpack-Vortex
-resourcepacks: []
-title: Wolfpack-Vortex
-version: 1.0.0
