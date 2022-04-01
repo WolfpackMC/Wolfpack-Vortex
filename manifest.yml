@@ -6,6 +6,7 @@ mods:
 - fabric-api:
 - roughly-enough-items:
 - mambience:
+- cloth-config:
 - modmenu:
 - not-enough-crashes:
 - dynamic-sound-filters:
