@@ -1,5 +1,5 @@
 modloader: Fabric
-version: 1.18.2
+version: 1.18.1
 mods:
 - pehkui:
 - spark:
@@ -19,7 +19,7 @@ mods:
 - travelers-titles-fabric:
 - immersive-portals-mod:
 - hwyla:
-- ferritecore:
+- ferritecore-fabric:
 - lithium:
 - phosphor:
 - bits-and-chisels:
