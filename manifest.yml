@@ -4,6 +4,7 @@ mods:
 - pehkui:
 - spark:
 - fabric-api:
+- architectury-fabric:
 - roughly-enough-items:
 - mambience:
 - cloth-config:
